@@ -1,0 +1,42 @@
+import React from "react";
+import { Card, CardContent } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
+import { motion } from "framer-motion";
+import { FaGithub, FaLinkedin, FaEnvelope } from "react-icons/fa";
+
+const projects = [
+  { name: "Data Science Portfolio", link: "https://github.com/PANKAJ955956/data-science-projects" },
+  { name: "Power BI Dashboards", link: "https://github.com/PANKAJ955956/POWEER-BI-PROJECTS-" },
+  { name: "SQL Practice", link: "https://github.com/PANKAJ955956/SQL-LEARNING-" }
+];
+
+export default function Portfolio() {
+  return (
+    <div className="min-h-screen bg-gray-900 text-white p-6 space-y-10">
+      <motion.h1 className="text-4xl font-bold text-center" animate={{ scale: 1.1 }}>Pankaj Kumar</motion.h1>
+      <p className="text-center text-lg">BTech Computer Science | Data Science & Big Data Enthusiast</p>
+      
+      <div className="flex justify-center space-x-4">
+        <a href="https://github.com/PANKAJ955956" target="_blank" rel="noopener noreferrer"><FaGithub size={30} /></a>
+        <a href="https://www.linkedin.com/in/pankaj-kumar-472a29294" target="_blank" rel="noopener noreferrer"><FaLinkedin size={30} /></a>
+        <a href="mailto:PANKAJ955956@GMAIL.COM"><FaEnvelope size={30} /></a>
+      </div>
+
+      <section className="space-y-4">
+        <h2 className="text-2xl font-semibold">Projects</h2>
+        <div className="grid md:grid-cols-3 gap-4">
+          {projects.map((project, index) => (
+            <Card key={index} className="bg-gray-800 p-4 rounded-lg shadow-lg">
+              <CardContent>
+                <h3 className="text-lg font-semibold">{project.name}</h3>
+                <a href={project.link} target="_blank" rel="noopener noreferrer">
+                  <Button className="mt-2 w-full">View Project</Button>
+                </a>
+              </CardContent>
+            </Card>
+          ))}
+        </div>
+      </section>
+    </div>
+  );
+}
