@@ -38,6 +38,7 @@
 - **Data Science Projects:** Analysis, Visualization, Machine Learning models
 - **Big Data Project:** Satellite-based Air Quality Mapping using AI/ML
 - **AI/ML Project:** Mental Health AI Companion App (Final Year Project)
+- **WEB DEVELOPMENT Project:**AI POWERED BY HERBAL / ECHO GARDENS WEBSITES (Final Year Project)
 ---
 
 ## 📬 Let's Connect!
